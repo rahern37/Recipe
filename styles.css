@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*global styles*/
+
+html {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(122, 191, 191, .5);
+    color: #0D0D0D;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+h1 {
+    font-size: 40;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+dd {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+dt {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+input {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #EB5428;
+    background-color: #FFFFFF;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    color: #EB5428;
+}
+
+nav span {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+figcaption {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+menu li {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: #EB5428;
+    list-style-type: none;
+}
+
+menu li a {
+    text-decoration: none;
+    color: #EB5428;
+}
+
+#details li {
+    list-style-type: none;
+}
+
+#sides {
+    background-color: #7ABFBF;
+    color: #0D0D0D;
+}
+
+#social li {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: #EB5428;
+    list-style-type: none;
+}
+
+#social a {
+    text-decoration: none;
+    color: #EB5428;
+}
+
+footer {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    background-color: #FFFFFF;
+}
+
+
+/*Responsive media qweries*/
+
+@media screen and (min-width:1280px) {
+    #details {
+        color: #7ABFBF;
+        background-color: #0D0D0D;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #details {
+        color: #0D0D0D;
+        background-color: #F2F2F2;
+    }
+}
