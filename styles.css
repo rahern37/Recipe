@@ -7,6 +7,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(122, 191, 191, .5);
     color: #0D0D0D;
+    margin: 0 auto;
 }
 
 body {
@@ -98,6 +99,14 @@ menu li a {
     list-style-type: none;
 }
 
+#ingredients ul {
+    padding-left: 20px;
+}
+
+#ingredients li {
+    list-style-type: square;
+}
+
 #sides {
     background-color: #7ABFBF;
     color: #0D0D0D;
@@ -108,6 +117,14 @@ menu li a {
     font-family: 'Bebas Neue', cursive;
     color: #EB5428;
     list-style-type: none;
+}
+
+#signIn a {
+    color: #0D0D0D;
+}
+
+#signIn a:hover {
+    background-color: #F2F2F2;
 }
 
 #social a {
@@ -125,9 +142,143 @@ footer {
 /*Responsive media qweries*/
 
 @media screen and (min-width:1280px) {
+    body {
+        width: 1280px;
+        margin: 0 auto;
+    }
+    main {
+        width: 1280px;
+        margin: 0 auto;
+    }
+    menu {
+        border: 2px solid #EB5428;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header img {
+        max-width: 570px;
+        max-height: 812px;
+    }
     #details {
         color: #7ABFBF;
         background-color: #0D0D0D;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #details h2 {
+        margin: 5px;
+    }
+    #wrap {
+        display: inline-grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 5px;
+    }
+    #wrap dd {
+        margin: 0;
+    }
+    #wrap2 {
+        display: inline-grid;
+        grid-template-columns: 220px 1018px;
+        grid-template-rows: 1fr;
+    }
+    #wrap2 #ingredients h2,
+    #wrap2 #directions h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    #wrap2 #ingredients ul {
+        line-height: 2;
+    }
+    #wrap2 #directions ol li {
+        margin: 15px;
+    }
+    #sides {
+        width: 1280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #wrap3 {
+        width: 1280px;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #wrap dl {
+        display: inline;
+    }
+    #sides #wrap3 {
+        width: 1280px;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #sides h3 {
+        text-align: center;
+    }
+    #rice {
+        width: 234px;
+    }
+    #wrap3 dd {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    #salsa {
+        width: 234px;
+    }
+    #guacamole {
+        width: 320px;
+    }
+    #tortillas {
+        width: 320px;
+    }
+    #sides #wrap3 h3 {
+        text-align: left;
+    }
+    nav {
+        width: 1280px;
+        position: fixed;
+        top: 0;
+    }
+    nav ul {
+        display: inline-grid;
+        grid-template-columns: repeat(9, 1fr);
+        padding: 0;
+        width: 1280px;
+        text-align: center;
+    }
+    nav ul li {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    nav img {
+        max-height: 50px;
+        max-width: 50px;
+    }
+    #home svg {
+        height: auto;
+        width: 100px;
+    }
+    nav h2 {
+        display: none;
+    }
+    nav a:hover {
+        color: #FFFFFF;
+        background-color: #EB5428;
+    }
+    #searchbar {
+        position: relative;
+        top: -2812px;
+        left: 476px;
+        display: flex;
+    }
+    #searchbar input {
+        border: 2px solid #EB5428;
+        width: 275px;
     }
 }
 
