@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    font-size: 40;
+    font-size: 40px;
     font-family: 'Bebas Neue', cursive;
 }
 
@@ -60,13 +60,12 @@ nav {
     font-family: 'Montserrat', sans-serif;
     color: #EB5428;
     background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
 }
 
-nav li {
-    list-style-type: none;
-}
-
-nav a {
+nav li a {
+    text-decoration: none;
     font-size: 20px;
     font-family: 'Bebas Neue', cursive;
     text-decoration: none;
@@ -90,6 +89,10 @@ menu li {
     list-style-type: none;
 }
 
+menu li:hover {
+    background-color: #EB542850;
+}
+
 menu li a {
     text-decoration: none;
     color: #EB5428;
@@ -110,6 +113,10 @@ menu li a {
 #sides {
     background-color: #7ABFBF;
     color: #0D0D0D;
+}
+
+#sides #wrap3 div:hover {
+    background-color: #EB5428;
 }
 
 #social li {
@@ -138,6 +145,10 @@ footer {
     background-color: #FFFFFF;
 }
 
+footer li:hover {
+    background-color: yellow;
+}
+
 
 /*Responsive media qweries*/
 
@@ -152,13 +163,11 @@ footer {
     }
     header {
         width: 1280px;
-        height: 809px;
-        padding-top: 250px;
+        padding-top: 100px;
         display: inline-flex;
         flex-direction: column;
     }
     header h1 {
-        margin-top: -74px;
         text-align: center;
         padding-top: 50px;
     }
@@ -283,25 +292,25 @@ footer {
     nav ul {
         display: inline-grid;
         grid-template-columns: repeat(9, 1fr);
-        padding: 0;
+        grid-template-rows: 100px;
+        margin: 0;
         width: 1280px;
         text-align: center;
+        padding-left: 0;
     }
     nav ul li {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    nav ul li a {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
     }
     nav img {
         max-height: 50px;
         max-width: 50px;
-    }
-    #home svg {
-        height: auto;
-        width: 100px;
-    }
-    nav h2 {
-        display: none;
     }
     nav a:hover {
         color: #FFFFFF;
@@ -310,7 +319,7 @@ footer {
     #searchbar {
         display: flex;
         position: absolute;
-        top: 15%;
+        top: 13%;
         left: 41%;
     }
     #searchbar input {
@@ -372,10 +381,17 @@ footer {
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (max-width:768px) {
     body {
         width: 768px;
         margin: 0 auto;
+    }
+    header {
+        width: 768px;
+        padding-top: 230px;
+    }
+    header h1 {
+        margin-left: 20px;
     }
     main {
         width: 768px;
@@ -405,17 +421,325 @@ footer {
         width: 100%;
     }
     #tacoP {
-        padding: 0 10px 0 10px;
+        padding: 0 25px 0 15px;
     }
     #details {
         color: #0D0D0D;
         background-color: #F2F2F2;
+        text-align: center;
     }
     #details h2 {
         text-align: center;
     }
+    #details #wrap {
+        display: inline-flex;
+        flex-direction: column;
+    }
     #wrap div dl {
         display: grid;
         grid-template-columns: 100px 200px;
+        margin-bottom: 5px;
+    }
+    #wrap div dd {
+        margin-left: 0;
+    }
+    #ingredients h2 {
+        text-align: center;
+    }
+    #directions h2 {
+        text-align: center;
+    }
+    #wrap2 {
+        display: inline-grid;
+        grid-template-columns: 220px 520px;
+        grid-template-rows: 1fr;
+    }
+    #wrap2 li {
+        margin-bottom: 5px;
+    }
+    #sides {
+        width: 768px;
+    }
+    #sides #wrap3 div {
+        padding: 5px;
+    }
+    #sides>h3 {
+        text-align: center;
+    }
+    #rice,
+    #salsa,
+    #guacamole,
+    #tortilla {
+        width: 360px;
+        display: inline-flex;
+    }
+    #sides img {
+        height: 30%;
+        width: 30%;
+    }
+    #sides div h3 {
+        margin-top: 0px;
+        margin-left: 5px;
+        margin-bottom: 0;
+    }
+    #sides dl {
+        margin-left: 5px;
+    }
+    #sides dt {
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+    #sides dd {
+        font-weight: bold;
+        margin-left: 0px;
+    }
+    nav {
+        width: 768px;
+        position: fixed;
+        top: 0;
+        height: 250px;
+        display: inline-grid;
+    }
+    nav ul {
+        display: inline-grid;
+        grid-template-columns: repeat(9, 1fr);
+        padding: 0;
+        height: 200px;
+        width: 768px;
+        text-align: center;
+    }
+    nav ul li {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    nav ul li a {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #breakfast,
+    #brunch,
+    #lunch,
+    #dinner,
+    #appetizers,
+    #desserts,
+    #beverages {
+        grid-row-start: 2;
+    }
+    #breakfast {
+        grid-column-start: 2;
+    }
+    #brunch {
+        grid-column-start: 3;
+    }
+    #lunch {
+        grid-column-start: 4;
+    }
+    #dinner {
+        grid-column-start: 5;
+    }
+    #appetizers {
+        grid-column-start: 6;
+    }
+    #desserts {
+        grid-column-start: 7;
+    }
+    #beverages {
+        grid-column-start: 8;
+    }
+    #signIn {
+        grid-column-start: 9;
+        display: inline-flex;
+    }
+    nav ul li img {
+        max-width: 85px;
+        max-height: 80px;
+    }
+    nav a:hover {
+        color: #FFFFFF;
+        background-color: #EB5428;
+    }
+    #searchbar {
+        position: fixed;
+        top: 2%;
+        left: 50%;
+        display: inline-flex;
+        flex-direction: row;
+    }
+    #searchbar input {
+        border: 2px solid #EB5428;
+    }
+    #searchbar svg {
+        max-height: 100%;
+    }
+    footer h3,
+    footer h4 {
+        display: none;
+    }
+    footer {
+        text-transform: capitalize;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: bold;
+        width: 768px;
+        display: inline-flex;
+        flex-direction: row-reverse;
+    }
+    #side img {
+        max-width: 70%;
+    }
+    #social {
+        width: 500px;
+    }
+    #social ul {
+        padding: 0;
+    }
+    #social li {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-right: 30px;
+    }
+    figure {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-right: 0;
+        width: 298px;
+    }
+    footer p {
+        text-transform: capitalize;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: bold;
+    }
+    figure img {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width:414px) {
+    body {
+        width: 414px;
+        margin: 0 auto;
+    }
+    header {
+        width: 414px;
+        padding-top: 150px;
+    }
+    header h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+    main {
+        width: 414px;
+        margin: 0 auto;
+    }
+    menu {
+        width: 414px;
+        position: inherit;
+        background-color: #F2F2F2;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 0px;
+    }
+    nav {
+        width: 414px;
+        max-height: 100px;
+        position: fixed;
+        top: 0;
+        display: inline flex;
+    }
+    nav ul {
+        text-align: center;
+        background-color: #FFFFFF;
+        padding: 0;
+        margin: 0;
+        width: 414px;
+        max-height: 100px;
+        display: inline-flex;
+    }
+    nav li a {
+        display: block;
+        padding: 20px 20px;
+        margin-bottom: 2px;
+        text-decoration: none;
+        color: #EB5428;
+    }
+    #breakfast,
+    #lunch,
+    #desserts,
+    #brunch,
+    #beverages,
+    #dinner,
+    #appetizers {
+        display: none;
+    }
+    #home {
+        display: grid;
+        width: 344px;
+    }
+    #signIn {
+        display: inline-flex;
+        align-items: flex-end;
+        margin-left: 86px;
+    }
+    #tacoIntro {
+        width: 414px;
+    }
+    #tacoIntro img {
+        width: 100%;
+        height: 100%;
+    }
+    #details {
+        text-align: left;
+    }
+    #wrap {
+        padding-left: 15px;
+    }
+    #wrap2 {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    #directions {
+        padding-right: 20px;
+    }
+    #details h2 {
+        text-align: center;
+    }
+    #sides {
+        width: 414px;
+    }
+    #sides #wrap3 div {
+        padding-left: 10px;
+    }
+    footer {
+        width: 414px;
+        display: inline-grid;
+        grid-template-rows: 80px;
+    }
+    #social {
+        width: 414px;
+    }
+    #social ul {
+        padding-left: 10px;
+    }
+    figure {
+        width: 300px;
+    }
+    #side {
+        text-align: center;
+        line-height: 0.25;
+    }
+    h2 {
+        text-align: center;
+    }
+    #searchbar {
+        position: absolute;
+        top: 12%;
+        left: 25%;
+        width: 260px;
+        display: inline-flex;
+        flex-direction: row;
     }
 }
